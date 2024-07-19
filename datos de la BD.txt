@@ -1,0 +1,141 @@
+use institucion;
+
+INSERT INTO Departamento (nombre) VALUES
+('Lima'),
+('Arequipa'),
+('Cusco'),
+('Puno'),
+('Tacna'),
+('Moquegua'),
+('La Libertad'),
+('Ancash'),
+('Huánuco'),
+('Ica');
+
+INSERT INTO Provincia (nombre, idDepartamento) VALUES
+('Lima', 1),
+('Arequipa', 2),
+('Cusco', 3),
+('Puno', 4),
+('Tacna', 5),
+('Moquegua', 6),
+('Trujillo', 7),
+('Huaraz', 8),
+('Huánuco', 9),
+('Ica', 10);
+
+INSERT INTO Distrito (nombre, idProvincia) VALUES
+('Lima Centro', 1),
+('Arequipa Centro', 2),
+('Cusco Centro', 3),
+('Puno Centro', 4),
+('Tacna Centro', 5),
+('Moquegua Centro', 6),
+('Trujillo Centro', 7),
+('Huaraz Centro', 8),
+('Huánuco Centro', 9),
+('Ica Centro', 10);
+
+INSERT INTO Persona (dni, nombres, apellidos, direccion, telefono, fecha_nac, idDistrito) VALUES
+('12345678', 'Juan', 'Pérez', 'Av. Lima 123', '987654321', '1990-01-01', 1),
+('23456789', 'María', 'Gonzales', 'Av. Arequipa 456', '912345678', '1992-02-02', 2),
+('34567890', 'Pedro', 'Rodríguez', 'Av. Cusco 789', '765432109', '1995-03-03', 3),
+('45678901', 'Ana', 'Sánchez', 'Av. Puno 234', '654321098', '1997-04-04', 4),
+('56789012', 'Luis', 'Martínez', 'Av. Tacna 567', '543210987', '1999-05-05', 5),
+('67890123', 'Sofía', 'García', 'Av. Moquegua 890', '432109876', '2001-06-06', 6),
+('78901234', 'Carlos', 'Díaz', 'Av. Trujillo 123', '321098765', '2003-07-07', 7),
+('89012345', 'Lucía', 'Hernández', 'Av. Huaraz 456', '210987654', '2005-08-08', 8),
+('90123456', 'Miguel', 'López', 'Av. Huánuco 789', '198765432', '2007-09-09', 9),
+('01234567', 'Elena', 'Gómez', 'Av. Ica 234', '876543210', '2009-10-10', 10);
+
+INSERT INTO Docente (categoria, condicion, dni) VALUES
+('Profesor', 'Activo', '12345678'),
+('Profesor', 'Activo', '23456789'),
+('Profesor', 'Activo', '34567890'),
+('Profesor', 'Activo', '45678901'),
+('Profesor', 'Activo', '56789012'),
+('Profesor', 'Activo', '67890123'),
+('Profesor', 'Activo', '78901234'),
+('Profesor', 'Activo', '89012345'),
+('Profesor', 'Activo', '90123456'),
+('Profesor', 'Activo', '01234567');
+
+INSERT INTO Alumno (codigo, dni) VALUES
+('ALU001', '12345678'),
+('ALU002', '23456789'),
+('ALU003', '34567890'),
+('ALU004', '45678901'),
+('ALU005', '56789012'),
+('ALU006', '67890123'),
+('ALU007', '78901234'),
+('ALU008', '89012345'),
+('ALU009', '90123456'),
+('ALU010', '01234567');
+
+INSERT INTO Modulo (nombre, tHoras) VALUES
+('Matemáticas', 4),
+('Lengua', 3),
+('Ciencias', 4),
+('Historia', 3),
+('Geografía', 3),
+('Física', 4),
+('Química', 4),
+('Biología', 4),
+('Informática', 3),
+('Educación Física', 2);
+
+INSERT INTO Semestre (detalle) VALUES
+('Semestre 1'),
+('Semestre 2'),
+('Semestre 3'),
+('Semestre 4'),
+('Semestre 5'),
+('Semestre 6'),
+('Semestre 7'),
+('Semestre 8'),
+('Semestre 9'),
+('Semestre 10');
+
+INSERT INTO Matricula (dni, idModulo, nota, idSemestre) VALUES
+('12345678', 1, 15, 1),
+('12345678', 2, 18, 1),
+('23456789', 1, 12, 1),
+('23456789', 3, 16, 1),
+('34567890', 2, 14, 1),
+('34567890', 4, 19, 1),
+('45678901', 3, 13, 1),
+('45678901', 5, 17, 1),
+('56789012', 4, 11, 1),
+('56789012', 6, 15, 1),
+('67890123', 5, 12, 1),
+('67890123', 7, 18, 1),
+('78901234', 6, 14, 1),
+('78901234', 8, 19, 1),
+('89012345', 7, 13, 1),
+('89012345', 9, 17, 1),
+('90123456', 8, 11, 1),
+('90123456', 10, 15, 1),
+('01234567', 9, 12, 1),
+('01234567', 1, 18, 1);
+
+INSERT INTO docente_modulo (dni, idModulo, idSemestre) VALUES
+('12345678', 1, 1),
+('12345678', 2, 1),
+('23456789', 1, 1),
+('23456789', 3, 1),
+('34567890', 2, 1),
+('34567890', 4, 1),
+('45678901', 3, 1),
+('45678901', 5, 1),
+('56789012', 4, 1),
+('56789012', 6, 1),
+('67890123', 5, 1),
+('67890123', 7, 1),
+('78901234', 6, 1),
+('78901234', 8, 1),
+('89012345', 7, 1),
+('89012345', 9, 1),
+('90123456', 8, 1),
+('90123456', 10, 1),
+('01234567', 9, 1),
+('01234567', 1, 1);
