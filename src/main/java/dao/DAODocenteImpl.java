@@ -40,7 +40,11 @@ public class DAODocenteImpl implements IDAODocente {
     @Override
     public List<Docente> listar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-
+    }
+    
+    @Override
+    public String eliminar(Docente docente) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public List<Persona> listar_persona() {
@@ -62,11 +66,6 @@ public class DAODocenteImpl implements IDAODocente {
             System.err.println("Error al listar departamentos: " + e.getMessage());
         }
         return listaPer;
-    }
-
-    @Override
-    public String eliminar(Docente docente) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public List<Object[]> listarNombresYApellidosDocente() {
